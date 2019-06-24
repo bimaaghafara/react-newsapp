@@ -15,28 +15,28 @@ class Layout extends React.Component {
     
 	render() {
 		return (
-            <div>
+            <div className="container">
                 <Head>
                     <title>{this.props.pageTitle}</title>
                     <meta charSet='utf-8' />
                     <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+                    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
                 </Head>
-                <header>
+                <header style={{margin: '20px 0'}}>
                     <nav>
                         <Link href='/'>
                             <a>Home</a>
-                        </Link>{' '}
-                        |
+                        </Link>
+                        {' '}
                         <Link href='/article'>
                             <a>Article</a>
-                        </Link>{' '}
+                        </Link>
                     </nav>
-                    <div><h3>{this.props.pageTitle}</h3></div>
                 </header>
 
                 {this.props.children}
 
-                <footer>{'I`m here to stay as footer!'}</footer>
+                {/* <footer>footer!</footer> */}
             </div>
 		);
 	}

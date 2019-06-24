@@ -8,6 +8,8 @@ const reducer = (state = {pageTitle: ''}, action) => {
     switch (action.type) {
         case 'PAGE_TITLE':
             return {...state, pageTitle: action.payload};
+        case 'ARTICLES':
+            return {...state, articles: action.payload};
         default:
             return state
     }
