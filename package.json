@@ -1,0 +1,17 @@
+{
+  "name": "react-newsapp",
+  "version": "0.0.1",
+  "description": "Simple News Application Using React and Newsapi.org",
+  "author": "Bimaa Ghafara <bimaa7@gmail.com.com>",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^8.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {}
+}
