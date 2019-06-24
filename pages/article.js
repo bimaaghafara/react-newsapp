@@ -3,8 +3,9 @@ import React from 'react';
 // components
 import Layout from '../components/layout'
 
-class Home extends React.Component {
+class Article extends React.Component {
 	static async getInitialProps({ req }) {
+		console.log('Article')
 		const userAgent = req ? req.headers['user-agent'] : navigator.userAgent;
 		return { userAgent };
 	}
@@ -14,20 +15,15 @@ class Home extends React.Component {
 		this.state = {
 			activeMenu: 'home'
 		};
-	}
-
-	componentDidMount() {
-		console.log('Home')
-	}
-
+    }
+    
 	render() {
 		return (
-			// <div>Hello World! {this.props.activeMenu} {this.props.userAgent}</div>
-			<Layout>
-				Hello World.
+            <Layout>
+				Article
 			</Layout>
 		);
 	}
 }
 
-export default Home;
+export default Article;
