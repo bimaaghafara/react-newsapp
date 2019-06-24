@@ -27,10 +27,6 @@ class Layout extends React.Component {
                         <Link href='/'>
                             <a>Home</a>
                         </Link>
-                        {' '}
-                        <Link href='/article'>
-                            <a>Article</a>
-                        </Link>
                     </nav>
                 </header>
 
