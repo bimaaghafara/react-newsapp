@@ -1,5 +1,6 @@
-import Link from 'next/link'
-import Head from 'next/head'
+import Link from 'next/link';
+import Head from 'next/head';
+import {connect} from "react-redux";
 
 class Layout extends React.Component {
 	static async getInitialProps({ req }) {
@@ -19,7 +20,7 @@ class Layout extends React.Component {
 		return (
             <div>
                 <Head>
-                    <title>{this.props.title}</title>
+                    <title>{this.props.pageTitle}</title>
                     <meta charSet='utf-8' />
                     <meta name='viewport' content='initial-scale=1.0, width=device-width' />
                 </Head>
@@ -33,6 +34,7 @@ class Layout extends React.Component {
                             <a>Article</a>
                         </Link>{' '}
                     </nav>
+                    <div><h3>{this.props.pageTitle}</h3></div>
                 </header>
 
                 {this.props.children}
@@ -43,4 +45,4 @@ class Layout extends React.Component {
 	}
 }
 
-export default Layout;
+export default connect(state => state)(Layout);

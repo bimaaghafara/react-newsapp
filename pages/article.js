@@ -3,9 +3,11 @@ import React from 'react';
 // components
 import Layout from '../components/layout'
 
+import {connect} from "react-redux";
+
 class Article extends React.Component {
-	static async getInitialProps({ req }) {
-		console.log('Article')
+	static async getInitialProps({ req, store }) {
+		store.dispatch({type: 'PAGE_TITLE', payload: 'Article'});
 		const userAgent = req ? req.headers['user-agent'] : navigator.userAgent;
 		return { userAgent };
 	}
@@ -26,4 +28,4 @@ class Article extends React.Component {
 	}
 }
 
-export default Article;
+export default connect(state => state)(Article);

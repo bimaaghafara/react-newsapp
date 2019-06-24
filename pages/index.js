@@ -1,10 +1,14 @@
 import React from 'react';
 
 // components
-import Layout from '../components/layout'
+import Layout from '../components/layout';
+
+
+import {connect} from "react-redux";
 
 class Home extends React.Component {
-	static async getInitialProps({ req }) {
+	static async getInitialProps({ req, store }) {
+		store.dispatch({type: 'PAGE_TITLE', payload: 'Home'});
 		const userAgent = req ? req.headers['user-agent'] : navigator.userAgent;
 		return { userAgent };
 	}
@@ -30,4 +34,4 @@ class Home extends React.Component {
 	}
 }
 
-export default Home;
+export default connect(state => state)(Home);
