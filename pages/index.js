@@ -9,14 +9,12 @@ import {connect} from "react-redux";
 class Home extends React.Component {
 	static async getInitialProps({ req, store }) {
 		store.dispatch({type: 'PAGE_TITLE', payload: 'Home'});
-		const userAgent = req ? req.headers['user-agent'] : navigator.userAgent;
-		return { userAgent };
+		return {};
 	}
 
 	constructor(props) {
 		super(props);
 		this.state = {
-			activeMenu: 'home'
 		};
 	}
 

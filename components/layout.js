@@ -4,15 +4,12 @@ import {connect} from "react-redux";
 
 class Layout extends React.Component {
 	static async getInitialProps({ req }) {
-		console.log('Article')
-		const userAgent = req ? req.headers['user-agent'] : navigator.userAgent;
-		return { userAgent };
+		return {};
 	}
 
 	constructor(props) {
 		super(props);
 		this.state = {
-			activeMenu: 'home'
 		};
     }
     
